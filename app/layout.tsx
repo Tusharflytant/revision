@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://Revision-seven.vercel.app/"),
+  metadataBase: new URL("https://revision-orcin.vercel.app//"),
   title: { default: "Revision", template: `%s | Revision` },
   description: "Stay updated with the latest tech and global news.",
   openGraph: {
