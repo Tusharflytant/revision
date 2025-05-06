@@ -83,7 +83,7 @@ const Page = () => {
         href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
         passHref
       >
-        <div className=" p-3 rounded-lg hover:bg-neutral-700 ">
+        <div className=" p-3 rounded-lg  ">
           <Post3
             pimg={`/${['lovestories', 'relationship'].includes(post.category) ? 'articleassets' : 'blogassets'}/${post.imgUrl}`}
             pheading={post.title}

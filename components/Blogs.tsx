@@ -37,12 +37,12 @@ const Blogs = ({
         </div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute inset-0 bg-black/30 z-10" />
 
         {/* Top Labels */}
         <div className="absolute top-4 left-4 right-4 z-20 flex justify-between items-center">
           {/* Category */}
-          <span className="bg-white/30 hover:bg-white/50  uppercase text-xs font-semibold px-3 py-2 rounded-md">
+          <span className="bg-white/10 hover:bg-white/50  uppercase text-xs font-semibold px-3 py-2 rounded-md">
             {category}
           </span>
 

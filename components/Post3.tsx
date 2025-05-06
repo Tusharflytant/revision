@@ -12,7 +12,7 @@ interface PostProps {
 
 const Posts: React.FC<PostProps> = ({ pimg, pheading,author, articleNumber }) => {
   return (
-    <div className="relative w-full h-[300px] rounded-2xl overflow-hidden group border border-white bg-neutral-900 shadow-md">
+    <div className="relative w-full h-[300px] rounded-2xl overflow-hidden group border border-gray-500 bg-neutral-900 shadow-md">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -25,7 +25,7 @@ const Posts: React.FC<PostProps> = ({ pimg, pheading,author, articleNumber }) =>
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-10 transition duration-300 group-hover:bg-black/70" />
+      <div className="absolute inset-0 bg-black/40 z-10 transition duration-300 " />
 
       
 

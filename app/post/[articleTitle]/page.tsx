@@ -233,7 +233,7 @@ const PostPage = async ({
                   alt="Random Feature"
                   width={1000}
                   height={600}
-                  className="rounded-xl object-cover w-full max-w-[1200px] h-[500px]"
+                  className="rounded-xl object-cover border-gray-500 w-full max-w-[1200px] h-[500px]"
                 />
               </div>
             )}
@@ -249,7 +249,7 @@ const PostPage = async ({
                     : "blogassets"
                 }/${content}`}
                 alt="Image"
-                className="mt-4 w-full rounded-lg"
+                className="mt-4 border-gray-500 w-full rounded-lg"
               />
             ) : isHeading ? (
               <strong className="block text-2xl sm:text-3xl mt-8">
@@ -266,7 +266,7 @@ const PostPage = async ({
 
   {/* SIDEBAR */}
   <div className="w-full mb-24 lg:mr-4   rounded-xl  lg:h-[1200px] 
-         lg:w-[600px] ">
+         lg:w-[400px] ">
   <h2 className="text-white mt-8 lg:ml-2 hover:text-gray-300 hover:cursor-pointer text-left font-bold tracking-wide text-3xl sm:text-xl mb-6">
     FEATURED POSTS
   </h2>
@@ -277,7 +277,7 @@ const PostPage = async ({
         href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, "-")}`}
         passHref
       >
-        <div className=" p-3 rounded-lg hover:bg-neutral-700 transition duration-300">
+        <div className=" p-3 rounded-lg ">
           <Post3
             pimg={`/${['lovestories', 'relationship'].includes(post.category) ? 'articleassets' : 'blogassets'}/${post.imgUrl}`}
             pheading={post.title}

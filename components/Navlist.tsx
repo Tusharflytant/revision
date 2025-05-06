@@ -49,7 +49,7 @@ const Navlist: React.FC<NavlistProps> = ({ posts, sectionTitle }) => {
             {posts.slice(0, visiblePosts).map((post, index) => (
               <Link
                 key={index}
-                href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, '-').toLowerCase()}`}
+                href={`/post/${post.title.replace(/[^A-Za-z0-9]+/g, '-')}`}
                 className="bg-black p-4 lg:p-0"
               >
                 <Image
