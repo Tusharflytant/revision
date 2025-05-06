@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
- 
-Sitemap: https://wavy-seven.vercel.app/sitemap.xml

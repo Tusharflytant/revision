@@ -333,7 +333,7 @@ const PostPage = async ({
 
 
       {/* Related Articles Section */}
-      <div className="mt-20 max-w-7xl mx-auto">
+      <div className="mt-20 max-w-7xl px-4 lg:px-0 mx-auto">
         <h2 className="text-white  hover:text-gray-300 hover:cursor-pointer text-left font-bold tracking-wide
          text-3xl sm:text-4xl lg:text-4xl mb-8">
           Read Next

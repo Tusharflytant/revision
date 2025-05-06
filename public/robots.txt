@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+ 
+Sitemap: https://revision-orcin.vercel.app/sitemap.xml

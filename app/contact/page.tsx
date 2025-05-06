@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Footer from "../../components/Footer";
+import toast, { Toaster } from 'react-hot-toast';
 
 interface FormData {
   name: string;
@@ -53,26 +53,27 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      alert("All fields are required!");
+      toast.error("All fields are required!");
       return;
     }
 
     if (errors.name || errors.email || errors.message) {
-      alert("Please fix the errors before submitting.");
+      toast.error("Please fix the errors before submitting.");
       return;
     }
 
-    alert("Submitted Successfully!");
+    toast.success("Submitted Successfully!");
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
     <>
-      <div className="bg-gray-50 text-gray-800 min-h-screen">
+      <div className="bg-black text-white min-h-screen">
         {/* Header */}
-        <header className="bg-gradient-to-r from-indigo-500 via-purple-500   to-pink-500 text-white py-10 text-center">
-          <h1 className="text-4xl mt-14 font-bold">Contact Wavy</h1>
-          <p className="text-md mt-2 text-gray-300">
+        <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
+        <header className="bg-gray-900 text-white py-10 text-center">
+          <h1 className="text-4xl font-bold">Contact Revision</h1>
+          <p className="text-md mt-2 text-gray-400">
             Reach out with questions, feedback, or just to say hello — we’d love to hear from you.
           </p>
         </header>
@@ -80,11 +81,11 @@ const Contact: React.FC = () => {
         {/* Main Content */}
         <main className="max-w-5xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10">
           {/* Contact Form */}
-          <section className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl text-indigo-700 font-semibold mb-4">Send Us a Message</h2>
+          <section className="bg-black p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl text-white font-semibold mb-4">Send Us a Message</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 mb-1">Name</label>
+                <label htmlFor="name" className="block text-white mb-1">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -98,7 +99,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 mb-1">Email</label>
+                <label htmlFor="email" className="block text-white mb-1">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -112,7 +113,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-700 mb-1">Message</label>
+                <label htmlFor="message" className="block text-white mb-1">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -125,29 +126,27 @@ const Contact: React.FC = () => {
               </div>
 
               <button
-                type="submit"
-                className="mt-6 px-6 py-2 text-white font-semibold rounded-lg transition-all duration-300 bg-gradient-to-r
-   from-pink-500 to-orange-400 hover:cursor-pointer hover:from-orange-500 hover:to-pink-600 shadow-md hover:shadow-lg"
-              >
-                Submit
-              </button>
+  type="submit"
+  className="mt-6 px-6 py-2 hover:cursor-pointer text-white font-semibold rounded-lg transition-all duration-300 bg-black hover:bg-gray-800 shadow-md hover:shadow-lg"
+>
+  Submit
+</button>
+
             </form>
           </section>
 
           {/* Contact Info */}
-          <section className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl text-indigo-700 font-semibold mb-4">Contact Information</h2>
-            <p className="text-gray-700 mb-2">
+          <section className="bg-black p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl text-white font-semibold mb-4">Contact Information</h2>
+            <p className="text-white mb-2">
               <strong>Address:</strong> New York, Carmel, 10512
             </p>
-            <p className="text-gray-700 mb-2">
-              <strong>Email:</strong> support@wavy.com
+            <p className="text-white mb-2">
+              <strong>Email:</strong> contact@Revision.com
             </p>
           </section>
         </main>
       </div>
-
-      <Footer />
     </>
   );
 };
